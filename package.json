@@ -1,4 +1,4 @@
-{ "name": "tv",
+{ "name": "webinos-api-tv",
   "version": "0.0.1",
   "main": "./lib/webinos.rpc_tv.js",
   "directories": {
