@@ -10,9 +10,7 @@
   } ],
   "description": "Interface for TV control and managment. ",
   "keywords": [ "sources", "channels", "streams" ],
-  "repositories": [ {
-    "type": "git",
-    "url": "http://dev.webinos.org/git/wp4.git",
-    "path": "webinos/api/tv"
-  } ]
+  "devDependencies": {
+    "webinos-jsonrpc2": "*"
+  }
 }
