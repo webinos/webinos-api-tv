@@ -1,5 +1,5 @@
 { "name": "webinos-api-tv",
-  "version": "0.0.1",
+  "version": "0.8.0",
   "main": "./lib/webinos.rpc_tv.js",
   "directories": {
     "lib": "./lib"
@@ -12,5 +12,9 @@
   "keywords": [ "sources", "channels", "streams" ],
   "devDependencies": {
     "webinos-jsonrpc2": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webinos/webinos-api-tv.git"
   }
 }
