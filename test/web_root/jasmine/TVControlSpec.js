@@ -354,28 +354,28 @@ describe("tv module API", function() {
 	});
 	
 	//for phase two: negative test, tv service gets unavailable
-	xit("can not receive a list of all available TV tuners if all TV services get unavailable (plugged off)", function(){
-		var tuners = null, errored = false, successed = false, atLeastOneTunerFound = false;
-		
-		tvService.tuner.getTVSources(function(foundTuners){
-			tuners = foundTuners;
-			atLeastOneTunerFound = tuners instanceof Array && tuners.length>0;
-			successed = true;
-		},function(error){
-			errored = true;
-		});
-		
-		waitsFor(function() {
-			return errored || successed;
-		}, "some callback (success or error) for getting TV source to be called.", 1000);
-		
-		runs(function() {
-			expect(errored).toEqual(true);
-			expect(successed).toEqual(false);
-			expect(tuners).toBeNull();
-			expect(atLeastOneTunerFound).toEqual(false);
-		});
-	});
+//	xit("can not receive a list of all available TV tuners if all TV services get unavailable (plugged off)", function(){
+//		var tuners = null, errored = false, successed = false, atLeastOneTunerFound = false;
+//		
+//		tvService.tuner.getTVSources(function(foundTuners){
+//			tuners = foundTuners;
+//			atLeastOneTunerFound = tuners instanceof Array && tuners.length>0;
+//			successed = true;
+//		},function(error){
+//			errored = true;
+//		});
+//		
+//		waitsFor(function() {
+//			return errored || successed;
+//		}, "some callback (success or error) for getting TV source to be called.", 1000);
+//		
+//		runs(function() {
+//			expect(errored).toEqual(true);
+//			expect(successed).toEqual(false);
+//			expect(tuners).toBeNull();
+//			expect(atLeastOneTunerFound).toEqual(false);
+//		});
+//	});
 	
 	//events tests
 	it("will notify all registered listeners about occured channel change events",function(){
