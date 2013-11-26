@@ -60,6 +60,25 @@ Alternatively you can use the webinos dashboard to allow the user choose the TV 
 
 Once you have a reference to an instance of a service you can use the following methods:
 
+###setChannel(channel, successCallback, errorCallback)
+
+Switches the channel natively on the TV (same as when a hardware remote control would be used)
+
+###getEPGPIC(channel, successCallback, errorCallback)
+
+This is only to bridge the missing Media Capture API and EPG functionality
+
+###addEventListener(eventname, channelchangeeventhandler, useCapture)
+
+addEventListener method defines the captured data, which can be retrieved continously.
+
+###getTVSources(successCallback, errorCallback)
+
+Get a list of all available TV tuners.
+
+###initChannelChangeEvent(type, bubbles, cancelable, channel)
+
+Initializes a new channel change event.
 
 
 ## Links ##
