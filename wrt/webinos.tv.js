@@ -320,14 +320,18 @@
 	 * 
 	 */
 	TVManager = function(obj) {
-		this.base = WebinosService;
-		this.base(obj);
+	    WebinosService.call(this, obj);
 		that = this;
 		
 		this.display = new TVDisplayManager(obj);
 		this.tuner = new TVTunerManager(obj);
 	};
-	TVManager.prototype = new WebinosService;
+     // Inherit all functions from WebinosService
+    TVManager.prototype = Object.create(WebinosService.prototype);
+    // The following allows the 'instanceof' to work properly
+    TVManager.prototype.constructor = TVManager;
+    // Register to the service discovery
+    _webinos.registerServiceConstructor("http://webinos.org/api/tv", TVManager);
 
 
 }());
